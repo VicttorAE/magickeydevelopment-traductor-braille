@@ -11,8 +11,12 @@
 - Dayana Lema
 - Matias Villareal
 - Gilson Cango
+## 1. Cronograma de trabajo
 
-## 1. Análisis
+![alt text](pixelcut-export.jpeg)
+
+
+## 2. Análisis
 
 Historias de Usuario
 
