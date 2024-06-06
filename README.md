@@ -98,8 +98,10 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 
 - **`main`**: Esta rama se mantiene siempre estable y contiene la documentación.
 - **`develop`**: Esta rama es donde se realiza el desarrollo activo de nuevas características y funcionalidades. Todos los desarrolladores colaboran en esta rama.
-- **`testing`**: Una vez que se completa una característica en `develop`, se fusiona en `testing` para pruebas. Esta rama es manejada por el tester.
-
+- **`testing`**: Ramas dedicadas para pruebas.
+  - **`testing/image-generation`**: En esta rama se prueba la funcionalidad en general.
+  - **`testing/character-recognition`**: En esta rama se hacen pruebas unitarias.
+- **`preliminar-docs`**: contiene la documentación preliminar antes de enviarla al `main`.
 ## Pasos del Flujo de Trabajo
 
 1. **Desarrollo**:
@@ -108,11 +110,19 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
    - Cuando se completa una característica, se realiza una revisión de código (code review) a través de un pull request.
 
 2. **Testing**:
-   - Después de aprobarse una característica en la revisión de código, se fusiona la rama `develop` en la rama `testing`.
-   - El equipo de testing realiza pruebas exhaustivas en esta rama.
-   - Si se encuentran errores, se corrigen en la rama `develop` y luego se vuelven a fusionar en `testing` para retesting.
+   - Desde `develop`, se fusiona en las ramas de testing específicas:
+     - **`testing/image-generation`**
+     - **`testing/character-recognition`**
+   - El tester realiza pruebas en estas ramas.
+   - Si se encuentran errores, se corrigen en la rama de desarrollo `develop` y luego se vuelven a fusionar en las ramas de testing para retesting.
 
-3. **Producción**:
+3. **Documentación Preliminar**:
+   - La documentación preliminar se realiza en la rama `preliminar-docs`.
+   - Una vez que la documentación está completa y revisada, se fusiona en `main`.
+
+4. **Producción**:
    - Una vez que el código en la rama `testing` ha pasado todas las pruebas, se fusiona en la rama `main`.
    - La rama `main` contiene el código listo para ser desplegado en producción.
+
+![alt text](<Flujo de trabajo.jpg>)
 
