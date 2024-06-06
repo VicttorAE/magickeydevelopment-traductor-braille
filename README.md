@@ -12,6 +12,8 @@
 - Matias Villareal
 - Gilson Cango
 
+## Análisis
+
 Historias de Usuario
 
 | Historia de Usuario |                |
@@ -83,3 +85,34 @@ Historias de Usuario
 |----------------------|-----------------|
 | Número de HU:              | 5               |
 | Descripción:               |                 | 
+
+
+
+
+# Flujo de Trabajo Feature Branch Workflow
+## Descripción del Flujo de Trabajo
+
+Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar claramente las fases de desarrollo y testing en ramas dedicadas. Este flujo de trabajo asegura la estabilidad y calidad del código antes de que llegue a producción.
+
+## Ramas
+
+- **`main`**: Esta rama se mantiene siempre estable y contiene la documentación.
+- **`develop`**: Esta rama es donde se realiza el desarrollo activo de nuevas características y funcionalidades. Todos los desarrolladores colaboran en esta rama.
+- **`testing`**: Una vez que se completa una característica en `develop`, se fusiona en `testing` para pruebas. Esta rama es manejada por el tester.
+
+## Pasos del Flujo de Trabajo
+
+1. **Desarrollo**:
+   - Los desarrolladores trabajan en la rama `develop`.
+   - Cada nueva característica o cambio se implementa en esta rama.
+   - Cuando se completa una característica, se realiza una revisión de código (code review) a través de un pull request.
+
+2. **Testing**:
+   - Después de aprobarse una característica en la revisión de código, se fusiona la rama `develop` en la rama `testing`.
+   - El equipo de testing realiza pruebas exhaustivas en esta rama.
+   - Si se encuentran errores, se corrigen en la rama `develop` y luego se vuelven a fusionar en `testing` para retesting.
+
+3. **Producción**:
+   - Una vez que el código en la rama `testing` ha pasado todas las pruebas, se fusiona en la rama `main`.
+   - La rama `main` contiene el código listo para ser desplegado en producción.
+
