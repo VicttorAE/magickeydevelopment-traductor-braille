@@ -88,6 +88,7 @@ Historias de Usuario
 
 
 
+
 # Flujo de Trabajo Feature Branch Workflow
 ## Descripción del Flujo de Trabajo
 
@@ -114,3 +115,4 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 3. **Producción**:
    - Una vez que el código en la rama `testing` ha pasado todas las pruebas, se fusiona en la rama `main`.
    - La rama `main` contiene el código listo para ser desplegado en producción.
+
