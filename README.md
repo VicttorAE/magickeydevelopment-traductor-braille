@@ -1,4 +1,4 @@
-# Proyecto de Calidad de Software
+# Calidad de Software
 
 ## GR2SW
 
@@ -7,12 +7,12 @@
 ### Integrantes
 
 - Victor Rodriguez
-- Gabriela Arichavala
+- Karina Arichavala
 - Dayana Lema
 - Matias Villareal
 - Gilson Cango
 
-## Análisis
+## 1. Análisis
 
 Historias de Usuario
 
@@ -88,13 +88,13 @@ Historias de Usuario
 
 
 
-
-# Flujo de Trabajo Feature Branch Workflow
-## Descripción del Flujo de Trabajo
+# Construcción y evolución de Software
+## Flujo de Trabajo Feature Branch Workflow
+### Descripción del Flujo de Trabajo
 
 Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar claramente las fases de desarrollo y testing en ramas dedicadas. Este flujo de trabajo asegura la estabilidad y calidad del código antes de que llegue a producción.
 
-## Ramas
+#### Ramas
 
 - **`main`**: Esta rama se mantiene siempre estable y contiene la documentación.
 - **`develop`**: Esta rama es donde se realiza el desarrollo activo de nuevas características y funcionalidades. Todos los desarrolladores colaboran en esta rama.
@@ -102,7 +102,7 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
   - **`testing/image-generation`**: En esta rama se prueba la funcionalidad en general.
   - **`testing/character-recognition`**: En esta rama se hacen pruebas unitarias.
 - **`preliminar-docs`**: contiene la documentación preliminar antes de enviarla al `main`.
-## Pasos del Flujo de Trabajo
+#### Pasos del Flujo de Trabajo
 
 1. **Desarrollo**:
    - Los desarrolladores trabajan en la rama `develop`.
@@ -125,4 +125,36 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
    - La rama `main` contiene el código listo para ser desplegado en producción.
 
 ![alt text](<Flujo de trabajo.jpg>)
+
+## Documentación del ambiente de desarrollo
+
+### Lenguaje de Programación
+
+- **Python**: Utilizamos la versión 3.12.3, la cual se puede descargar desde [python.org](https://www.python.org/downloads/release/python-3123/).
+
+### Editor de Código
+
+- **Visual Studio Code**: Se utilizó VS Code como editor de código, se puede descargar desde [code.visualstudio.com](https://code.visualstudio.com/).
+
+## Instalación del Ambiente de Desarrollo
+
+### Instalación de Python
+
+1. Descargar el instalador de Python 3.12.3 en el enlace que se indicó con anterioridad.
+2. Ejecutar el instalador y seguir las instrucciones para completar la instalación.
+
+### Instalación de Visual Studio Code
+
+1. Descargar el instalador de VS Code en el enlace que se indicó con anterioridad.
+2. Ejecutar el instalador y seguir las instrucciones para completar la instalación.
+
+### Configuración del Ambiente de Desarrollo
+
+1. **Instalar extensiones recomendadas en VS Code**:
+    - Python: Esta extensión proporciona soporte para Python en VS Code.
+
+2. **Configurar el intérprete de Python**:
+    - Abrir VS Code y seleccionar el intérprete de Python 3.12.3:
+        - Presionar `Ctrl+Shift+P` para abrir la paleta de comandos.
+        - Escribir `Python: Select Interpreter` y seleccionar la versión 3.12.3.
 
