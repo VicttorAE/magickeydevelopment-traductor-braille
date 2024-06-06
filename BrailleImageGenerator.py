@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
+from tkinter import filedialog, messagebox
 
 class BrailleImageGenerator:
     def __init__(self, translator):
@@ -6,9 +7,11 @@ class BrailleImageGenerator:
     
     def generar_senaletica_braille(self, texto, nombre_archivo):
         braille_text = self.translator.texto_a_braille(texto)
-        img = Image.new('RGB', (len(braille_text) * 20, 30), color=(255, 255, 255))
+        nombre_archivo = filedialog.asksaveasfilename(
+            defaultextension = ".*", title = "Save File", filetypes = (("PNG Files", "*.png"), ("All Files", "*.*"), ))
+        img = Image.new('RGB', (len(braille_text) * 30, 50), color=(255, 255, 255))
         d = ImageDraw.Draw(img)
-        font = ImageFont.load_default()
+        font = ImageFont.truetype('Font/ONCE_CBE_6.ttf', 30)
         d.text((10, 10), braille_text, font=font, fill=(0, 0, 0))
         img.save(nombre_archivo)
 
