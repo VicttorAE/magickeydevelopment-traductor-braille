@@ -1,4 +1,6 @@
 # BrailleTranslator.py
+import os
+import sys
 
 class BrailleTranslator:
     def __init__(self, dict_file):
@@ -11,6 +13,9 @@ class BrailleTranslator:
         Returns:
             None
         """
+        if hasattr(sys, '_MEIPASS'):
+            # Estamos en un ejecutable empaquetado
+            dict_file = os.path.join(sys._MEIPASS, dict_file)
         self.braille_dict = self.load_dict(dict_file)
 
     def load_dict(self, dict_file):
