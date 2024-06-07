@@ -263,6 +263,15 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 1. Descargar el instalador de VS Code en el enlace que se indicó con anterioridad.
 2. Ejecutar el instalador y seguir las instrucciones para completar la instalación.
 
+# Base de Datos de Conocimiento
+
+| Identificador | Descripción                         | Categoría             | Solución                                                                                  |
+|---------------|-------------------------------------|-----------------------|-------------------------------------------------------------------------------------------|
+| 1             | Elección de lenguaje de programación| Deciciones de Diseño| Revisar y corregir la lógica de transcripción de números en el módulo correspondiente      |
+| 2             | UI no accesible para usuarios ciegos| Accesibilidad         | Implementar mejoras en el diseño UI para cumplir con las normas de accesibilidad (WCAG)    |
+| 3             | Traducción incorrecta de caracteres | Lógica de negocio     | Ajustar el algoritmo de traducción para manejar caracteres especiales correctamente        |
+| 4             | Problemas de rendimiento            | Rendimiento           | Optimizar el código y revisar las consultas a la base de datos para mejorar la eficiencia  |
+
 
 ### Configuración del Ambiente de Desarrollo
 
