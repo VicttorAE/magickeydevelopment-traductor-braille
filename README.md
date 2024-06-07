@@ -11,6 +11,7 @@
 - Dayana Lema: Diseño
 - Matias Villareal: Desarrollador
 - Gilson Chango: Desarrollador
+
 ## 1. Cronograma de trabajo
 
 ![alt text](images/pixelcut-export.jpeg)
@@ -29,11 +30,6 @@ Historias de Usuario
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
 | Descripción:         | Como usuario, quiero poder transcribir textos del español al sistema de escritura braille, abecedario, vocales acentuadas,signos básicos y números(anteponer el signo de número y en los números de dos o más cifras anteponer el signo solo al inicio ), para que pueda generar contenido accesible para personas con discapacidad visual. |
 
-| Criterios de aceptación |                |
-|----------------------|-----------------|
-| Número de HU:              | 1               |
-| Descripción:               |                 | 
-
 | Historia de Usuario |                |
 |----------------------|-----------------|
 | Número:              | 2               |
@@ -43,10 +39,6 @@ Historias de Usuario
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
 | Descripción:         | Como usuario, quiero poder transcribir textos escritos en braille al español, para poder entender el contenido escrito en braille. |
 
-| Criterios de aceptación |                |
-|----------------------|-----------------|
-| Número de HU:              | 2               |
-| Descripción:               |                 | 
 
 | Historia de Usuario |                |
 |----------------------|-----------------|
@@ -57,10 +49,6 @@ Historias de Usuario
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
 | Descripción:         | Como usuario, quiero poder generar señalética en braille a partir de textos en español, para mejorar la accesibilidad de edificios, aparatos, juegos de mesa, prendas de vestir, medicamentos, alimentos empacados, etc. |
 
-| Criterios de aceptación |                |
-|----------------------|-----------------|
-| Número de HU:              | 3               |
-| Descripción:               |                 | 
 
 | Historia de Usuario |                |
 |----------------------|-----------------|
@@ -71,10 +59,6 @@ Historias de Usuario
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
 | Descripción:         | Como usuario, quiero poder generar impresiones en espejo de textos braille, para poder escribir manualmente en braille utilizando un punzón y una regleta. |
 
-| Criterios de aceptación |                |
-|----------------------|-----------------|
-| Número de HU:              | 4               |
-| Descripción:               |                 | 
 
 | Historia de Usuario |                |
 |----------------------|-----------------|
@@ -85,10 +69,6 @@ Historias de Usuario
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
 | Descripción:         | Como usuario, quiero que el sistema se limite a la traducción entre español y braille, y a la generación de impresiones guía, sin incluir funcionalidades adicionales como idiomas adicionales, impresión braille 3D o enseñanza de braille. |
 
-| Criterios de aceptación |                |
-|----------------------|-----------------|
-| Número de HU:              | 5               |
-| Descripción:               |                 | 
 
 ## 3. Diseño
 
@@ -216,6 +196,14 @@ La aplicación proporciona retroalimentación visual al usuario sobre el estado 
 
 
 # Construcción y evolución de Software
+
+### Integrantes
+
+- Victor Rodriguez
+- Karina Arichavala
+- Christian Nazate
+- Gilson Chango
+
 ## Flujo de Trabajo Feature Branch Workflow
 ### Descripción del Flujo de Trabajo
 
