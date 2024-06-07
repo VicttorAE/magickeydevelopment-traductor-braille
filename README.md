@@ -90,6 +90,129 @@ Historias de Usuario
 | Número de HU:              | 5               |
 | Descripción:               |                 | 
 
+## 3. Diseño
+
+**Módulos**
+
+**BrailleTranslator**
+
+` `Esta clase maneja la lógica central de la traducción. Carga un diccionario Braille desde un archivo de texto y proporciona métodos para traducir texto a Braille y viceversa.
+
+**BrailleImageGenerator** 
+
+Esta clase maneja la generación de imágenes Braille basadas en el texto traducido. Puede generar una imagen de texto simple que represente el Braille o una versión espejo para imprimir en PNG.
+
+**BrailleApp** 
+
+Esta clase construye la interfaz gráfica de usuario utilizando la librería Tkinter. Crea una ventana con etiquetas, cuadros de texto y botones para que los usuarios interactúen con la aplicación.
+
+**Interacción de Módulos**
+
+- **Flujo de Traducción**
+
+Usuario introduce texto en español: El usuario ingresa texto en el cuadro de texto "Español" (text\_esp) de la interfaz gráfica de usuario GUI.
+
+- **Traducción a Braille**
+
+La aplicación llama al método texto\_a\_braille() de la clase BrailleTranslator.
+
+Este método consulta el diccionario Braille cargado (archivo 'brailleDictionary.txt') para convertir cada carácter del texto en Español a su correspondiente representación en Braille.
+
+El texto Braille traducido se almacena en una variable temporal de la interfaz gráfica.
+
+- **Visualización del Texto Braille**
+
+El texto Braille traducido se inserta en el cuadro de texto "Braille" (text\_brl) de la GUI.
+
+El usuario puede visualizar la representación Braille del texto ingresado.
+
+- **2. Generación de Imagen Braille**
+
+Usuario selecciona opción "Generar Señalética Braille": El usuario hace clic en el botón "Generar Señalética Braille" de la GUI.
+
+- **Creación de Imagen Braille**
+
+La aplicación llama al método generar\_senaletica\_braille() de la clase BrailleImageGenerator.
+
+Este método recibe el texto en Español como entrada.
+
+El método genera una imagen PNG que representa el texto Braille utilizando una fuente Braille adecuada.
+
+La imagen se guarda en un archivo con nombre "senaletica.png".
+
+- **Notificación al Usuario**
+
+Se muestra un mensaje emergente al usuario indicando que la imagen Braille se ha generado y guardado en "senaletica.png".
+
+- **Impresión Espejo de Braille**
+
+Usuario selecciona opción "Imprimir en Espejo": El usuario hace clic en el botón "Imprimir en Espejo" de la GUI.
+
+Generación de Braille Espejo:
+
+La aplicación llama al método imprimir\_en\_espejo\_braille() de la clase BrailleImageGenerator.
+
+Este método recibe el texto en español como entrada.
+
+El método genera una versión invertida (espejo) del texto Braille.
+
+El texto Braille invertido se muestra en el cuadro de texto "Braille" (text\_brl) de la GUI.
+
+- **Preparación para Impresión**
+
+El usuario puede imprimir el texto Braille invertido en un material adecuado para Braille físico.
+
+- **Comunicación entre Componentes**
+
+**Uso de Métodos:** Los componentes se comunican entre sí mediante llamadas a métodos definidos en las clases.
+
+**Paso de Datos:** Los métodos reciben y pasan datos entre sí, como el texto en español, el texto Braille traducido, y la imagen generada.
+
+**Interfaz Gráfica:** La GUI actúa como intermediario entre el usuario y los componentes internos, permitiendo la interacción y el flujo de información.
+
+**Decisiones de Diseño**
+
+- **Enfoque Orientado a Objetos (POO)**
+
+Se implementa una estructura modular utilizando clases separadas para cada componente principal: BrailleTranslator, BrailleImageGenerator y BrailleApp.
+
+Esta modularidad promueve la organización del código, la reutilización de componentes y facilita el mantenimiento a largo plazo.
+
+Cada clase encapsula su propia lógica y datos, ocultando la implementación interna y mejorando la independencia de los componentes.
+
+- **Interfaz Gráfica de Usuario (GUI) con Tkinter:**
+
+Se utiliza la librería Tkinter para crear la interfaz gráfica de usuario (GUI) de la aplicación.
+
+Tkinter es una librería liviana y fácil de usar, lo que simplifica el desarrollo de la GUI y la hace accesible a una amplia gama de usuarios.
+
+La GUI proporciona una interfaz intuitiva con elementos como cuadros de texto, botones y mensajes, permitiendo a los usuarios interactuar fácilmente con la aplicación.
+
+- **Carga de Diccionario Braille desde Archivo**
+
+El diccionario Braille se carga desde un archivo de texto externo ('brailleDictionary.txt').
+
+Esta estrategia permite actualizar el diccionario con nuevos caracteres Braille o modificar las representaciones existentes sin necesidad de modificar el código fuente de la aplicación.
+
+Aumenta la flexibilidad y adaptabilidad de la aplicación a diferentes necesidades y estándares Braille.
+
+- **Generación de Imágenes Braille:**
+
+La funcionalidad de generación de imágenes Braille permite a los usuarios obtener representaciones visuales del texto traducido.
+
+- **Impresión Espejo de Braille:**
+
+Al imprimir el Braille en espejo, se obtiene una imagen invertida que, al ser vista a través de un material transparente, muestra el texto correctamente orientado.
+
+Esta funcionalidad facilita la creación de materiales Braille accesibles para personas con discapacidades visuales.
+
+- **Manejo de Errores y Retroalimentación al Usuario:**
+
+La aplicación proporciona retroalimentación visual al usuario sobre el estado de las operaciones, como la finalización exitosa de la traducción o la generación de la imagen Braille.
+
+**Diagrama de clases UML**
+
+[!Diagrama de clases UML](images/classDiagramUML.jpeg)
 
 
 # Construcción y evolución de Software
