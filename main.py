@@ -10,4 +10,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = BrailleApp(root, translator, image_generator)
     root.mainloop()
-    
+                
