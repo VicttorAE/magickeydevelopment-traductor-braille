@@ -156,10 +156,11 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 
 | Identificador | Descripción                         | Categoría             | Solución                                                                                  |
 |---------------|-------------------------------------|-----------------------|-------------------------------------------------------------------------------------------|
-| 1             | Elección de lenguaje de programación| Deciciones de Diseño| Revisar y corregir la lógica de transcripción de números en el módulo correspondiente      |
-| 2             | UI no accesible para usuarios ciegos| Accesibilidad         | Implementar mejoras en el diseño UI para cumplir con las normas de accesibilidad (WCAG)    |
-| 3             | Traducción incorrecta de caracteres | Lógica de negocio     | Ajustar el algoritmo de traducción para manejar caracteres especiales correctamente        |
-| 4             | Problemas de rendimiento            | Rendimiento           | Optimizar el código y revisar las consultas a la base de datos para mejorar la eficiencia  |
+| 1             | Elección del diseño de la aplicación| Decisiones de Diseño| Diálogo sobre los beneficios de un diseño orientado a objetos     |
+| 2             | Elección de lenguaje de programación| Decisiones de Implementación| Llegar a un acuerdo en base a los conocimientos del equipo     |
+| 3             | Inclusión de caracteres especiales| Requisitos del cliente         | Definir todos los caracteres especiales faltantes y añadirlos en el diccionario del programa    |
+| 4             | Traducción incorrecta de caracteres | Requisitos del cliente     | Ajustar el diccionario para manejar caracteres especiales correctamente        |
+| 5             | Problemas de fusión de ramas             | Desarrollo de flujo de trabajo           | el adminsitrador del repositorio solucionó el conflicto  |
 
 
 ### Configuración del Ambiente de Desarrollo
