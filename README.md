@@ -27,7 +27,7 @@ Historias de Usuario
 | Nombre historia:     | Transcripción de textos del español a braille |
 | Prioridad en negocio: | Alta          |Riesgo en desarrollo: | Baja |
 | Puntos estimados:    | 2              | Iteración asignada: | 1    |
-| Descripción:         | Como usuario, quiero poder transcribir textos del español al sistema de escritura braille, incluyendo números, abecedario, vocales acentuadas y signos básicos, para que pueda generar contenido accesible para personas con discapacidad visual. |
+| Descripción:         | Como usuario, quiero poder transcribir textos del español al sistema de escritura braille, abecedario, vocales acentuadas,signos básicos y números(anteponer el signo de número y en los números de dos o más cifras anteponer el signo solo al inicio ), para que pueda generar contenido accesible para personas con discapacidad visual. |
 
 | Criterios de aceptación |                |
 |----------------------|-----------------|
@@ -275,6 +275,7 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 1. Descargar el instalador de VS Code en el enlace que se indicó con anterioridad.
 2. Ejecutar el instalador y seguir las instrucciones para completar la instalación.
 
+
 ### Configuración del Ambiente de Desarrollo
 
 1. **Instalar extensiones recomendadas en VS Code**:
@@ -307,3 +308,4 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 
 En la tabla de resumen proporcionada se ofrece una visión panorámica de las relaciones de los artefactos desarrollados, evidenciando cómo un artefacto como el código fuente sirve como base fundamental para la creación de otro, como el manual del programador.
 Con esto podemos ver que cada fase del proceso de desarrollo aporta valor a las demás y es importante.
+
