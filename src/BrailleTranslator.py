@@ -1,88 +1,77 @@
-# BrailleTranslator.py
-import os
-import sys
-
 class BrailleTranslator:
     def __init__(self, dict_file):
-        """
-        Initializes a new instance of the class.
+        self.braille_dict = self.load_dictionary(dict_file)
+        self.num_indicator = '⠼'
+        self.decimal_point = '⠨'
+        self.decimal_comma = '⠐'
 
-        Parameters:
-            dict_file (str): The path to the file containing the dictionary.
-
-        Returns:
-            None
-        """
-        if hasattr(sys, '_MEIPASS'):
-            # Estamos en un ejecutable empaquetado
-            dict_file = os.path.join(sys._MEIPASS, dict_file)
-        self.braille_dict = self.load_dict(dict_file)
-
-    def load_dict(self, dict_file):
-        """
-        Load a dictionary from a file.
-
-        This function reads a file specified by the `dict_file` parameter and loads its contents into a dictionary.
-        Each line in the file is split at the first ':' character, and if the resulting parts have exactly two elements,
-        the character and its corresponding braille representation are added to the `braille_dict` dictionary.
-        If a line does not have exactly two parts, it is skipped and a message is printed to the console.
-
-        Parameters:
-            dict_file (str): The path to the file containing the dictionary.
-
-        Returns:
-            dict: The loaded dictionary containing the character-braille mappings.
-        """
+    def load_dictionary(self, dict_file):
         braille_dict = {}
-        with open(dict_file, 'r', encoding='utf-8') as file:
-            for line in file:
-                parts = line.strip().split(':')
-                if len(parts) == 2:
-                    char, braille = parts
-                    braille_dict[char.strip()] = braille.strip()
+        with open(dict_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if ':' in line:
+                    char, braille = line.split(':', 1)
+                    braille_dict[char] = braille
                 else:
-                    print(f"Skipping invalid line: {line.strip()}")
+                    # Manejar líneas con formato incorrecto
+                    pass
         return braille_dict
 
     def texto_a_braille(self, texto):
-        """
-        Generate a Braille representation of the given text by looking up each character in the braille_dict.
-
-        Parameters:
-            texto (str): The text to convert to Braille.
-
-        Returns:
-            str: The Braille representation of the input text.
-        """
-        braille_text = ''
-        inside_number = False  # Indicador para prefijo de número
-
+        braille_texto = ''
+        numero = False  # Usamos una bandera para saber si estamos en un número
         for char in texto:
-            if char.isdigit():
-                if not inside_number:
-                    braille_text += self.braille_dict.get('#', '')  # Prefijo de número
-                    inside_number = True
-                braille_text += self.braille_dict.get(char, '')
-            else:
-                inside_number = False
-                if char == '\n':
-                    braille_text += '\n'  # Mantiene el salto de línea
-                elif char.isspace():
-                    braille_text += ' '  # Añade un espacio en blanco
-                elif char.isupper():
-                    braille_text += self.braille_dict.get('MAYUS', '') + self.braille_dict.get(char.lower(), '')
+            if char.isdigit() or char == ',' or char == '.':
+                if not numero:
+                    braille_texto += self.num_indicator
+                    numero = True
+                if char == '.':
+                    braille_texto += self.decimal_point
+                elif char == ',':
+                    braille_texto += self.decimal_comma
                 else:
-                    braille_text += self.braille_dict.get(char, '')
+                    braille_texto += self.braille_dict.get(char, '')
+            else:
+                if numero:
+                    numero = False  # Reseteamos el estado de número
+                braille_texto += self.braille_dict.get(char, char)
+        return braille_texto
 
-        return braille_text
-        """
-        Generate text of the given braille text string by looking up each character in a reverse braille_dict.
+    def braille_a_texto(self, braille_texto):
+        texto = ''
+        numero = False  # Usamos una bandera para saber si estamos en un número
+        i = 0
+        while i < len(braille_texto):
+            char = braille_texto[i]
+            if char == self.num_indicator:
+                numero = True
+                i += 1
+                continue
+            if numero:
+                if char == self.decimal_point:
+                    texto += '.'
+                elif char == self.decimal_comma:
+                    texto += ','
+                else:
+                    num_char = next((key for key, value in self.braille_dict.items() if value == char), None)
+                    if num_char is not None:
+                        texto += num_char
+                    else:
+                        numero = False  # Reseteamos el estado de número
+                        texto += char
+                i += 1
+                continue
 
-        Parameters:
-            braille (str): The Braille text to be converted to text.
-            
-        Returns:
-            str: The corresponding text string.
-        """
-        reverse_braille_dict = {v: k for k, v in self.braille_dict.items()}
-        return ''.join(reverse_braille_dict.get(char, '') for char in braille)
+            if i < len(braille_texto) - 1:
+                double_char = braille_texto[i:i + 2]
+                texto_char = next((key for key, value in self.braille_dict.items() if value == double_char), None)
+                if texto_char:
+                    texto += texto_char
+                    i += 2
+                    continue
+
+            texto_char = next((key for key, value in self.braille_dict.items() if value == char), None)
+            texto += texto_char if texto_char else char
+            i += 1
+        return texto
