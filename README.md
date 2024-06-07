@@ -13,7 +13,7 @@
 - Gilson Cango
 ## 1. Cronograma de trabajo
 
-![alt text](pixelcut-export.jpeg)
+![alt text](images/pixelcut-export.jpeg)
 
 
 ## 2. Análisis
@@ -212,7 +212,7 @@ La aplicación proporciona retroalimentación visual al usuario sobre el estado 
 
 **Diagrama de clases UML**
 
-[!Diagrama de clases UML](images/classDiagramUML.jpeg)
+![Diagrama de clases UML](images/classDiagramUML.jpeg)
 
 
 # Construcción y evolución de Software
@@ -251,7 +251,7 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
    - Una vez que el código en la rama `testing` ha pasado todas las pruebas, se fusiona en la rama `main`.
    - La rama `main` contiene el código listo para ser desplegado en producción.
 
-![alt text](<Flujo de trabajo.jpg>)
+![alt text](images/workflow.jpg)
 
 ## Documentación del ambiente de desarrollo
 
