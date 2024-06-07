@@ -307,3 +307,59 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
 En la tabla de resumen proporcionada se ofrece una visión panorámica de las relaciones de los artefactos desarrollados, evidenciando cómo un artefacto como el código fuente sirve como base fundamental para la creación de otro, como el manual del programador.
 Con esto podemos ver que cada fase del proceso de desarrollo aporta valor a las demás y es importante.
 
+## Notas de la Versión 1.0.0
+
+
+
+### Resumen de la Versión
+
+Esta es la primera entrega del proyecto MagicKey Development, que incluye las funcionalidades básicas del sistema de transcripción y generación de braille. 
+
+### Nuevas Funcionalidades
+
+#### 1. Transcripción de Textos del Español a Braille
+- **Descripción:** Los usuarios pueden transcribir textos del español al sistema de escritura braille, incluyendo el abecedario, vocales acentuadas, signos básicos y números.
+- **Historias de Usuario Asociadas:** HU-1
+
+#### 2. Transcripción de Textos de Braille a Español
+- **Descripción:** Los usuarios pueden transcribir textos escritos en braille al español.
+- **Historias de Usuario Asociadas:** HU-2
+
+#### 3. Generación de Señaléticas en Braille
+- **Descripción:** Los usuarios pueden generar señaléticas en braille a partir de textos en español.
+- **Historias de Usuario Asociadas:** HU-3
+
+#### 4. Generación de Impresiones en Espejo
+- **Descripción:** Los usuarios pueden generar impresiones en espejo de textos braille para escribir manualmente en braille utilizando un punzón y una regleta.
+- **Historias de Usuario Asociadas:** HU-4
+
+#### 5. Traducción y Generación de Impresiones Guía
+- **Descripción:** El sistema está limitado a la traducción entre español y braille y a la generación de impresiones guía, sin incluir funcionalidades adicionales.
+- **Historias de Usuario Asociadas:** HU-5
+
+### Mejoras y Correcciones
+
+
+- **Resolución de Conflictos de Fusión:** Mejoras en el flujo de trabajo de Git para resolver conflictos de fusión de manera más eficiente.
+
+
+### Próximos Pasos
+
+En el siguiente sprint, nos enfocaremos en:
+- Mejorar la precisión de las traducciones.
+- Desarrollar una interfaz de usuario más amigable.
+
+### Agradecimientos
+
+Agradecemos a todos los miembros del equipo por su dedicación y esfuerzo en completar las tareas del primer sprint con éxito.
+
+### Integrantes del Equipo
+
+- Karina Arichavala: Scrum Master
+- Victor Rodriguez: QA
+- Dayana Lema: Diseño
+- Matias Villareal: Desarrollador
+- Gilson Chango: Desarrollador
+
+
+
