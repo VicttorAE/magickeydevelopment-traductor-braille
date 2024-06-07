@@ -6,11 +6,11 @@
 
 ### Integrantes
 
-- Victor Rodriguez
-- Karina Arichavala
-- Dayana Lema
-- Matias Villareal
-- Gilson Cango
+- Victor Rodriguez: QA
+- Karina Arichavala: Scrum Master
+- Dayana Lema: Diseño
+- Matias Villareal: Desarrollador
+- Gilson Chango: Desarrollador
 ## 1. Cronograma de trabajo
 
 ![alt text](images/pixelcut-export.jpeg)
@@ -285,3 +285,25 @@ Nuestro equipo utiliza un flujo de trabajo estructurado en Git para separar clar
         - Presionar `Ctrl+Shift+P` para abrir la paleta de comandos.
         - Escribir `Python: Select Interpreter` y seleccionar la versión 3.12.3.
 
+## Trazabilidad de Artefactos en el Proyecto MagicKey Development
+
+ Este documento presenta la trazabilidad de los artefactos desarrollados durante el proyecto, relacionando cada artefacto con los requisitos y las actividades realizadas.
+
+
+| Artefacto | Requisito | Actividad | Descripción |
+|---|---|---|---|
+| **Historias de Usuario** | Requisitos | Análisis de Requerimientos | Definición de las funcionalidades del sistema desde la perspectiva del usuario. |
+| **Definición del Diseño** | Historias de usuario | Diseño | Especificación de los modulos del sistema y decisiones importantes . |
+| **Flujo de Trabajo Feature Branch Workflow** | Gestión del Proyecto | Diseño del Flujo de Trabajo | Definición del proceso de desarrollo y testing utilizando ramas de Git. |
+| **Documentación del Ambiente de Desarrollo** | Gestión del Proyecto | Documentación | Definición de las herramientas y configuraciones necesarias para el desarrollo del proyecto. |
+| **Código** | Historias de usuario y Documento de Diseño | Implementación | Desarrollo del código que implementa las funcionalidades del sistema. |
+| **Pruebas Unitarias** | Historias de usuario | Testing | Verificación del funcionamiento específico de una parte del código. |
+| **Pruebas de Itegración** | Historias de usuario | Testing | Validación de la interacción correcta entre los diferentes componentes del sistema. |
+| **Artefacto funcional** | Historias de usario, Documento de Diseño,Pruebas | Despliegue | Primera entrega funcional para el cliente. |
+| **Documentación del código** | Código | Documentación | Elaboración de la documentación del código fuente. |
+| **Manual de instalación** | Artefacto funcional | Documentación | Elaboración del manual para instalación del artefacto funcional. |
+| **Manual de usuario** | Artefacto funcional | Documentación | Elaboración del manual para que el cliente pueda usar el artefacto funcional. |
+
+
+En la tabla de resumen proporcionada se ofrece una visión panorámica de las relaciones de los artefactos desarrollados, evidenciando cómo un artefacto como el código fuente sirve como base fundamental para la creación de otro, como el manual del programador.
+Con esto podemos ver que cada fase del proceso de desarrollo aporta valor a las demás y es importante.
