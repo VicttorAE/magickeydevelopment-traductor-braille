@@ -96,7 +96,7 @@ Historias de Usuario
 
 **BrailleTranslator**
 
-` `Esta clase maneja la lógica central de la traducción. Carga un diccionario Braille desde un archivo de texto y proporciona métodos para traducir texto a Braille y viceversa.
+ Esta clase maneja la lógica central de la traducción. Carga un diccionario Braille desde un archivo de texto y proporciona métodos para traducir texto a Braille y viceversa.
 
 **BrailleImageGenerator** 
 
