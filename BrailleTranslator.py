@@ -31,10 +31,10 @@ class BrailleTranslator:
         braille_dict = {}
         with open(dict_file, 'r', encoding='utf-8') as file:
             for line in file:
-                parts = line.strip().split(':', 1)  # Only split at the first ':'
+                parts = line.strip().split(':')
                 if len(parts) == 2:
                     char, braille = parts
-                    braille_dict[char] = braille
+                    braille_dict[char.strip()] = braille.strip()
                 else:
                     print(f"Skipping invalid line: {line.strip()}")
         return braille_dict
@@ -49,9 +49,27 @@ class BrailleTranslator:
         Returns:
             str: The Braille representation of the input text.
         """
-        return ''.join(self.braille_dict.get(char, '') for char in texto.lower())
+        braille_text = ''
+        inside_number = False  # Indicador para prefijo de número
 
-    def braille_a_texto(self, braille):
+        for char in texto:
+            if char.isdigit():
+                if not inside_number:
+                    braille_text += self.braille_dict.get('#', '')  # Prefijo de número
+                    inside_number = True
+                braille_text += self.braille_dict.get(char, '')
+            else:
+                inside_number = False
+                if char == '\n':
+                    braille_text += '\n'  # Mantiene el salto de línea
+                elif char.isspace():
+                    braille_text += ' '  # Añade un espacio en blanco
+                elif char.isupper():
+                    braille_text += self.braille_dict.get('MAYUS', '') + self.braille_dict.get(char.lower(), '')
+                else:
+                    braille_text += self.braille_dict.get(char, '')
+
+        return braille_text
         """
         Generate text of the given braille text string by looking up each character in a reverse braille_dict.
 
